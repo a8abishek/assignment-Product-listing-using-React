@@ -35,12 +35,10 @@ function Product() {
         p.title.toLowerCase().includes(search.toLowerCase())
       );
     }
-
     // Category filter
     if (category !== "All") {
       updated = updated.filter((p) => p.category === category);
     }
-
     // Sorting
     if (sorting === "lowtohigh") {
       updated.sort((a, b) => a.price - b.price);
@@ -49,18 +47,15 @@ function Product() {
     } else if (sorting === "rating") {
       updated.sort((a, b) => b.rating - a.rating);
     }
-
     setFilteredProducts(updated);
   }, [category, sorting, search, products]);
 
   return (
     <div>
-
       {/* NAVBAR with search + cart count */}
       <Navbar search={search} setSearch={setSearch} cartCount={cartCount} />
-
       <div className="flex">
-        {/* LEFT FILTER */}
+        {/* left filter */}
         <div className="py-10 px-10 border-2 border-white">
           <h1 className="text-2xl font-bold mb-5">Category</h1>
           <div className="flex flex-col gap-y-5">

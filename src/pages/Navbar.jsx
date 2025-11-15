@@ -5,7 +5,7 @@ function Navbar({ search, setSearch, cartCount }) {
     <div className='flex justify-between py-5 shadow px-10 items-center bg-[#09193b] text-white flex-wrap'>
       {/*brand*/}
       <div>
-        <h1 className='font-bold text-xl sm:text-[12px]'>A8V shop</h1>
+        <h1 className='font-bold text-xl'>A8V shop</h1>
       </div>
       {/* search input & Navbar*/}
       <div className='flex gap-x-20'>
